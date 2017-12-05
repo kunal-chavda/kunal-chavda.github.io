@@ -1,0 +1,8 @@
+@media all and (orientation:portrait) {
+	.navbar-nav{
+		float: none !important;
+		text-align: center;
+		background: #000;
+		border-bottom: 1px solid;
+	}
+}
