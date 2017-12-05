@@ -8,11 +8,62 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" href="/favicon.ico">
-
+  <style>
+    .site-btn {
+    position: relative;
+    display: inline-block;
+    color: #fff;
+    padding: 14px 40px;
+    border: none;
+    font-family: "Poppins", sans-serif;
+    line-height: normal;
+    text-transform: uppercase;
+    border-radius: 50px;
+    font-size: 12px;
+    letter-spacing: 1px;
+    background: #333;
+}
+.site-btn.btn-light {
+    background: #fff;
+    color: #333;
+    font-weight: bold;
+}
+.promotion h2 {
+    color: #fff;
+    font-size: 35px;
+}
+.promotion {
+    text-align: center;
+}
+.promotion-section {
+    position: relative;
+    padding: 150px 0;
+}
+.promotion-bg {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-image: url(assets/img/bg.png);
+    background-position: bottom;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+.promotion-bg:after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: #000;
+    opacity: 0.7;
+}
+  </style>
     <title>Kunal Chavda - Front End Web Developer</title>
 
     <!-- Bootstrap core CSS -->
@@ -356,7 +407,17 @@
       </div>
   </section>
   <section id="hire-me">
-    
+    <section class="promotion-section">
+      <div class="promotion-bg"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 col-md-offset-2 promotion">
+            <h2>Let's do some cool project together.</h2>
+            <a href="" class="site-btn btn-light mt25 wow fadeInUp" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">HIRE NOW !</a>
+          </div>
+        </div>
+      </div>
+    </section>
   </section>
     <!-- Bootstrap core JavaScript
     ================================================== -->
