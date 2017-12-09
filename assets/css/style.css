@@ -61,11 +61,102 @@ span.icon-bar {
     padding-top: 2em;
 }
 .title.text-center h1{
-	font-weight: 700;
-    color: rgba(36, 36, 36, 0.25);
+	    font-weight: 600;
+    color: rgb(68, 68, 68);
     position: relative;
+    margin-top: 10px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
 }
-.title.text-center h1:before {
+section#experience .border-center {
+    height: 1px;
+    width: 238px;
+    margin: 0 auto;
+    background: #0e0e0e;
+}
+section#about .border-center {
+    height: 1px;
+    width: 200px;
+    margin: 0 auto;
+    background: #0e0e0e;
+}
+section#portfolio .border-center {
+    height: 1px;
+    width: 287px;
+    margin: 0 auto;
+    background: #0e0e0e;
+}
+.hire-form .border-center {
+    height: 1px;
+    width: 350px;
+    margin: 0 auto;
+    background: #0e0e0e;
+}
+.hire-form{
+  padding-top: 2em;
+}
+.form-submit input[type="submit"] {
+    font-size: 16px;
+    text-transform: capitalize;
+    padding: 16px 40px;
+    background: #414141;
+    margin-top: 17px;
+    margin-left: 14px;
+    color: #fff;
+  outline: none;
+  border: none;
+}
+input.controler {
+    font-size: 14px;
+    margin-bottom: 12px;
+    padding: 14px 15px;
+    text-transform: capitalize;
+    width: 100%;
+    background: #f3f3f3;
+  outline: none;
+    border: none;
+  border-radius: inertial;
+}
+.single > textarea {
+    border: none;
+    width: 100%;
+    text-transform: capitalize;
+    padding: 18px;
+  outline: none;
+  resize: none;
+    background: #f3f3f3;
+    margin-top: 11px;
+    border-radius: inherit;
+}
+.footer-social-icon ul li {
+    display: inline-block;
+    margin-right: 5px;
+}
+footer.footer-area {
+    background: #f9f9f9;
+    padding: 40px 0px;
+      margin-top: 3em;
+}
+
+.footer-social-icon ul li a {
+    color: #fff;
+}
+.footer-social-icon ul li {
+        display: inline-block;
+    margin-right: 5px;
+    border: 2px solid;
+    background-color: #444;
+    /* padding: 1em; */
+    padding: 1em 1.3em;
+    color: #fff;
+    border-radius: 50px;
+}
+footer.footer-area {
+    background: #f9f9f9;
+    padding: 40px 0px;
+      margin-top: 3em;
+}
+/*.title.text-center h1:before {
     background: #666;
     bottom: -5px;
     content: "";
@@ -82,7 +173,7 @@ span.icon-bar {
     left: 49%;
     position: absolute;
     width: 38px;
-  }
+  }*/
 
 .go-down {
     width: 100%;
@@ -430,7 +521,7 @@ li strong {
     opacity: 0.7;
 }
 
-/*dfgdfgdg*/
+/*My Exoerience Hovr Effct*/
 
 
 .left-content:hover::before, .left-content:hover::after {

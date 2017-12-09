@@ -10,7 +10,7 @@ $(document).ready(function(){
     if (startchange.length){
    $(document).scroll(function() { 
       scroll_start = $(this).scrollTop();
-      if(scroll_start > offset.top) {
+      if(scroll_start > 100) {
           $("nav.navbar.navbar-fixed-top").css({'transition':'all ease 0.5s','background-color': '#fff', 'box-shadow': '0 0 4px rgba(0, 0, 0, 0.14), 0 4px 8px rgba(0, 0, 0, 0.28)'});
           $("a.navbar-brand, ul.nav.navbar-nav a").css('color', '#000');
           $("span.icon-bar").css('background-color', '#000');
@@ -48,6 +48,9 @@ $(document).ready(function(){
     }
 });
 
+
+ 
+
 /*For Page scroll active class*/
 
 // Cache selectors
@@ -69,7 +72,7 @@ menuItems.click(function(e){
       offsetTop = href === "#" ? 0 : $(href).offset().top-topMenuHeight+1;
   $('html, body').stop().animate({ 
       scrollTop: offsetTop
-  }, 500);
+  }, 1000);
   e.preventDefault();
 });
 
@@ -95,3 +98,10 @@ $(window).scroll(function(){
          .end().filter("[href='#"+id+"']").parent().addClass("active");
    }                   
 });
+$('#abt, .go-down a span').on('click', function(){
+      $("html, body").animate({scrollTop: $("#about").offset().top-topMenuHeight+1}, 1000);
+  });
+
+$('#logo').on('click', function(){
+      $("html, body").animate({scrollTop: $("#home").offset().top-topMenuHeight+1}, 1000);
+  });
