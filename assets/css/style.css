@@ -63,31 +63,26 @@ span.icon-bar {
 .title.text-center h1{
 	font-weight: 700;
     color: rgba(36, 36, 36, 0.25);
+    position: relative;
 }
 .title.text-center h1:before {
+    background: #666;
+    bottom: -5px;
     content: "";
-    background-color: #777;
-    width: 3%;
-    height: 2px;
+    height: 1px;
+    left: 47%;
     position: absolute;
-    left: 0;
-    right: 7em;
-    z-index: 0;
-    bottom: -44px;
-    margin: 0 auto;
+    width: 80px;
 }
 .title.text-center h1:after {
+    background: #666;
+    bottom: -15px;
     content: "";
-    background-color: #777;
-    width: 3%;
-    height: 2px;
+    height: 1px;
+    left: 49%;
     position: absolute;
-    left: 7em;
-    right: 0;
-    z-index: 0;
-    bottom: -44px;
-    margin: 0 auto;
-}
+    width: 38px;
+  }
 
 .go-down {
     width: 100%;
@@ -296,12 +291,11 @@ li.active.hvr-underline-from-center:before, .hvr-underline-from-center:hover:bef
     border: 1px solid #d0d0d0;
     padding: 30px;
     text-align: center;
-    border-bottom: 2px solid #d0d0d0;
     position: relative;
-}
-.resume-box .left-content:hover{
-  border-bottom: 2px solid #444444;
-  transition: all 0.5s ease;
+    -webkit-transition: 0.5s all;
+    transition: 0.5s all;
+    animation-name: fadeIn;
+    visibility: visible;
 }
 .resume-box .left-content .r-icon i {
     color: #FFF;
@@ -381,3 +375,83 @@ li strong {
 .col-md-12.roow {
     margin-bottom: 2em;
 }
+
+
+    .site-btn {
+    position: relative;
+    display: inline-block;
+    color: #fff;
+    padding: 14px 40px;
+    border: none;
+    font-family: "Poppins", sans-serif;
+    line-height: normal;
+    text-transform: uppercase;
+    border-radius: 50px;
+    font-size: 12px;
+    letter-spacing: 1px;
+    background: #333;
+}
+.site-btn.btn-light {
+    background: #fff;
+    color: #333;
+    font-weight: bold;
+}
+.promotion h2 {
+    color: #fff;
+    font-size: 35px;
+}
+.promotion {
+    text-align: center;
+}
+.promotion-section {
+    position: relative;
+    padding: 80px 0;
+}
+.promotion-bg {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-image: url(../../assets/img/bg.png);
+    background-position: bottom;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.promotion-bg:after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: #000;
+    opacity: 0.7;
+}
+
+/*dfgdfgdg*/
+
+
+.left-content:hover::before, .left-content:hover::after {
+    width: 100%;
+}
+.left-content:hover::before, .left-content:hover::after {
+    transition-delay: 0.2s;
+}
+.left-content::after {
+    left: 0;
+    bottom: 0;
+}
+.left-content::before {
+    right: 0;
+    top: 0;
+}
+.left-content::before, .left-content::after {
+    content: "";
+    width: 0;
+    height: 1px;
+    position: absolute;
+    transition: all 0.2s linear;
+    background: #444444;
+} 
