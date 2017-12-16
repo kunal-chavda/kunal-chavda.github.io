@@ -151,6 +151,9 @@ footer.footer-area {
     color: #fff;
     border-radius: 50px;
 }
+.skill-wrapper .col-xs-6.col-md-3 {
+    margin-bottom: 2em;
+}
 footer.footer-area {
     background: #f9f9f9;
     padding: 40px 0px;
