@@ -1,6 +1,7 @@
 <?php 
      date_default_timezone_set('Asia/Kolkata');
      require 'PHPMailerAutoload.php';
+	require_once('class.phpmailer.php');
 
 	$name    = (isset($_POST['username'])?$_POST['username']:"");
 	$email   = (isset($_POST['email'])?$_POST['email']:"");
