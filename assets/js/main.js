@@ -40,7 +40,7 @@ $(document).ready(function(){
           $('nav.navbar.navbar-fixed-top').css('background-color', 'transparent');
           $("a.navbar-brand, ul.nav.navbar-nav a").css('color', '#fff');
           $(".hvr-underline-from-center").removeClass('changed');
-          $(".navbar-nav").css('background-color', '#FFF');
+          $(".navbar-nav").css('background-color', '#000');
           $("span.icon-bar").css('background-color', '#fff');
        }
    });
