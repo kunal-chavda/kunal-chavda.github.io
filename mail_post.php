@@ -22,7 +22,7 @@
 
 	//Create a new PHPMailer instance
 	$mail = new PHPMailer();
-	$mail->SMTPSecure = 'tls';
+	$mail->SMTPSecure = 'ssl';
 	//Tell PHPMailer to use SMTP
 	// $mail->isSMTP();
 	//Enable SMTP debugging
