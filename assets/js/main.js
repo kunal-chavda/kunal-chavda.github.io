@@ -105,3 +105,6 @@ $('#abt, .go-down a span').on('click', function(){
 $('#logo').on('click', function(){
       $("html, body").animate({scrollTop: $("#home").offset().top-topMenuHeight+1}, 1000);
   });
+$('li.hvr-underline-from-center a').click(function(){
+  $('button.navbar-toggle').click();
+});
