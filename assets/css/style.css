@@ -133,7 +133,7 @@ input.controler {
     margin-right: 5px;
 }
 footer.footer-area {
-    background: #f9f9f9;
+    background: #eaeaea;
     padding: 40px 0px;
       margin-top: 3em;
 }
@@ -224,7 +224,7 @@ h2.skill-text {
     text-align: center;
     padding: 28.5px;
     padding-bottom: inherit;
-    background-color: #fbfbfb;
+    background-color: #eaeaea;
     transition: 0.5s;
 }
 .pie-effect:hover {
@@ -415,7 +415,7 @@ section#about {
     padding-bottom: 1em;
 }
 section#experience {
-    background-color: #fbfbfb;
+    background-color: #eaeaea;
     padding-bottom: 1em;
 }
 .title.text-center {
@@ -426,7 +426,7 @@ section#experience {
     padding-top: 1em;
 }
 li strong {
-    background-color: #fbfbfb;
+    background-color: #eaeaea;
     padding: 10px;
     padding-bottom: 8px;
 }
