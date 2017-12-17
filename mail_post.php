@@ -19,7 +19,7 @@
 		
 	</div>";
 
-
+/*
 	//Create a new PHPMailer instance
 	$mail = new PHPMailer();
 	$mail->SMTPSecure = 'tls';
@@ -66,7 +66,7 @@
 		//Read an HTML message body from an external file, convert referenced images to embedded,
 		//convert HTML into a basic plain-text alternative body
 		$mail->msgHTML($body);
-		//Replace the plain text body with one created manually*/
+		//Replace the plain text body with one created manually
 		$mail->AltBody = 'This is a plain-text message body';
 		//Attach an image file
 		// if($attach != ""){
@@ -86,5 +86,24 @@
 		} catch (phpmailerException $e) {
 
 		}
+*/
 
+$mail = new PHPMailer();
+$mail->IsSMTP();
+$mail->SMTPDebug = 0;
+$mail->SMTPAuth = TRUE;
+$mail->SMTPSecure = "tls";
+$mail->Port     = 587;  
+$mail->Username = "kunalchavda99gmail.com";
+$mail->Password = "madinfotech@321";
+$mail->Host     = "smtp.gmail.com";
+$mail->Mailer   = "smtp";
+$mail->SetFrom("kunalchavda99@gmail.com", "Kunal Chavda Website");
+//$mail->AddReplyTo("from email", "PHPPot");
+$mail->AddAddress("kunal@futureadymedia.com");
+$mail->Subject = "Test email using PHP mailer";
+//$mail->WordWrap   = 80;
+//$content = "<b>This is a test email using PHP mailer class.</b>";
+$mail->MsgHTML($message);
+$mail->IsHTML(true);
 ?>
