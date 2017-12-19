@@ -340,8 +340,8 @@
 			<input type="hidden" name="_cc" value="email@cc.com">
 			<!-- /CONFIG -->
                         <div class="form-submit text-center">
-                            <!-- <input type="submit" name="comment-sub" value="Send"> -->
-                          <button type="button" value="Send" class="btn btn-two" data="#contactform" id="modal_send-contact">Submit</button>
+                            <input type="submit" name="comment-sub" value="Send">
+                          <!-- <button type="button" value="Send" class="btn btn-two" data="#contactform" id="modal_send-contact">Submit</button> -->
                         </div>
                     </form>
                 </div>
@@ -439,7 +439,28 @@
           var email_pattern = /^[a-zA-Z][\w\.-]*[a-zA-Z0-9]@[a-zA-Z0-9][\w\.-]*[a-zA-Z0-9]\.[a-zA-Z][a-zA-Z\.]*[a-zA-Z]$/;
 
           // var phone_pattern = /^[0-9]+$/;
-         jQuery('#modal_send-contact').on("click", function() {
+          var $contactForm = $('#hire-me');
+                          $contactForm.submit(function() {
+                                  
+                                  jQuery.ajax({
+                                      url: '//formspree.io/kunalchavda99@gmail.com',
+                                      method: 'POST',
+                                      data: $(this).serialize(),
+                                      dataType: 'json',
+                                      beforeSend: function() {
+                                          $contactForm.append('<div class="alert alert--loading">Sending message…</div>');
+                                      },
+                                      success: function(data) {
+                                          $contactForm.find('.alert--loading').hide();
+                                          $contactForm.append('<div class="alert alert--success">Message sent!</div>');
+                                      },
+                                      error: function(err) {
+                                          $contactForm.find('.alert--loading').hide();
+                                          $contactForm.append('<div class="alert alert--error">Ops, there was an error.</div>');
+                                      }
+                                  });
+                              });
+        /* jQuery('#modal_send-contact').on("click", function() {
                 var validation = true;
                                       name_val = jQuery("#username").val();
                                       // phone_val = jQuery("#phone1").val();
@@ -507,7 +528,7 @@
                                   });
                               });
                         }
-         });
+         });*/
 
 
          
