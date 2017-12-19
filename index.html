@@ -324,7 +324,7 @@
 	      	</div>
     		<div class="col-md-8 col-md-offset-2">
                 <div class="contact-form wow fadeInUp" data-wow-delay=".4" style="visibility: visible; animation-name: fadeInUp;">
-                   <form id="hire-me" action="" method="POST">
+                   <form id="hire-me" action="//formspree.io/kunalchavda99@gmail.com" method="POST">
                         <div class="single col-md-6">
                             <input type="text" id="username" name="username" class="controler" placeholder="input your name" required="">
                         </div>
@@ -334,6 +334,11 @@
                         <div class="single col-md-12">
                             <textarea name="msg" id="message" cols="25" rows="10" placeholder="write message"></textarea>
                         </div>
+			   <!-- CONFIG -->
+			<input class="is-hidden" type="text" name="_gotcha">
+			<input type="hidden" name="_subject" value="Subject">
+			<input type="hidden" name="_cc" value="email@cc.com">
+			<!-- /CONFIG -->
                         <div class="form-submit text-center">
                             <!-- <input type="submit" name="comment-sub" value="Send"> -->
                           <button type="button" value="Send" class="btn btn-two" data="#contactform" id="modal_send-contact">Submit</button>
@@ -429,107 +434,83 @@
       gradient: ["black", "grey"]
     }
   });
-	        var data = {};
-    var name_pattern=/^[A-Za-z .'-]+$/;
-    var email_pattern=/^[a-zA-Z][\w\.-]*[a-zA-Z0-9]@[a-zA-Z0-9][\w\.-]*[a-zA-Z0-9]\.[a-zA-Z][a-zA-Z\.]*[a-zA-Z]$/;
-    // var phone_pattern = /^[0-9]+$/;
-  jQuery('#modal_send-contact').on("click",function(){
-    var validation = true;
-    name_val = jQuery("#username").val();
-    // phone_val = jQuery("#phone1").val();
-    email_val = jQuery("#email").val();
-    
-    name_match  = name_val.match(name_pattern);
-    email_match  = email_val.match(email_pattern);
-    // phone_match  = phone_val.match(phone_pattern);
+          var data = {};
+          var name_pattern = /^[A-Za-z .'-]+$/;
+          var email_pattern = /^[a-zA-Z][\w\.-]*[a-zA-Z0-9]@[a-zA-Z0-9][\w\.-]*[a-zA-Z0-9]\.[a-zA-Z][a-zA-Z\.]*[a-zA-Z]$/;
+
+          // var phone_pattern = /^[0-9]+$/;
+          jQuery('#modal_send-contact').on("click", function() {
+                      var validation = true;
+                      name_val = jQuery("#username").val();
+                      // phone_val = jQuery("#phone1").val();
+                      email_val = jQuery("#email").val();
+
+                      name_match = name_val.match(name_pattern);
+                      email_match = email_val.match(email_pattern);
+                      // phone_match  = phone_val.match(phone_pattern);
 
 
-    if(name_val!= ''){
+                      if (name_val != '') {
 
-      if(name_match === null){
-        validation = false;
-        jQuery('#username').val('');
-        jQuery('#username').attr("placeholder","Invalid format");
-        jQuery('#username').addClass('inputTxtError');
+                          if (name_match === null) {
+                              validation = false;
+                              jQuery('#username').val('');
+                              jQuery('#username').attr("placeholder", "Invalid format");
+                              jQuery('#username').addClass('inputTxtError');
 
-      }else{
-        jQuery('#username').parent().find('.error').text("span").remove();
-        jQuery('#username').removeClass('inputTxtError');
-      }
-    }else{
-      jQuery('#username').attr("placeholder","Enter Name");
-      jQuery('#username').addClass('inputTxtError');
-      validation = false;
-    }
-/*
-    if(phone_val!= ''){
+                          } else {
+                              jQuery('#username').parent().find('.error').text("span").remove();
+                              jQuery('#username').removeClass('inputTxtError');
+                          }
+                      } else {
+                          jQuery('#username').attr("placeholder", "Enter Name");
+                          jQuery('#username').addClass('inputTxtError');
+                          validation = false;
+                      }
 
-      if(phone_match === null){
-        validation = false;
-        jQuery('#phone1').val('');
-        jQuery('#phone1').attr("placeholder","Invalid format");
-        jQuery('#phone1').addClass('inputTxtError');
+                      if (email_val != '') {
 
-      }else{
-        jQuery('#phone1').parent().find('.error').text("span").remove();
-        jQuery('#phone1').removeClass('inputTxtError');
-      }
-    }else{
-      jQuery('#phone1').attr("placeholder","Enter Phone Number");
-      jQuery('#phone1').addClass('inputTxtError');
-      validation = false;
-    }
-*/
-    if(email_val!= ''){
+                          if (email_match === null) {
+                              validation = false;
+                              jQuery('#email').val('');
+                              jQuery('#email').attr("placeholder", "Invalid format");
+                              jQuery('#email').addClass('inputTxtError');
 
-      if(email_match === null){
-        validation = false;
-        jQuery('#email').val('');
-        jQuery('#email').attr("placeholder","Invalid format");
-        jQuery('#email').addClass('inputTxtError');
-
-      }else{
-        jQuery('#email').parent().find('.error').text("span").remove();
-        jQuery('#email').removeClass('inputTxtError');
-      }
-    }else{
-      jQuery('#email').attr("placeholder","Enter Email");
-      jQuery('#email').addClass('inputTxtError');
-      validation = false;
-    }
+                          } else {
+                              jQuery('#email').parent().find('.error').text("span").remove();
+                              jQuery('#email').removeClass('inputTxtError');
+                          }
+                      } else {
+                          jQuery('#email').attr("placeholder", "Enter Email");
+                          jQuery('#email').addClass('inputTxtError');
+                          validation = false;
+                      }
 
 
-    if(validation){
-    jQuery('#modal_send-contact').text("Registering...");
-       jQuery.ajax({
-           method: "POST",
-           url: "http://formspree.io/kunalchavda99@gmail.com",
-           data: jQuery("#hire-me").serialize(), // serializes the form's elements.
-	   dataType: "json",
-	   accepts:"application/json",
-           beforeSend: function() {
-               //alert("error");
-               //alert("before send");
-            },
-           success: function(data)
-           {  console.log(data);
-               jQuery('#modal_send-contact').text("SUBMIT");
-                document.getElementById("hire-me").reset();
-               if(data == "mailsent"){
-                     /*swal({   
-                        title: "Thank you for  your interest",  
-                        type:"success", 
-                        text: "We will get back to you within a few hours"
-                    });*/
-                    alert("Will get in touch with you")
-                 }
-                 else{
-                     alert("Some problem with the form,please try again.");
-                 }
-               }
-         });
-    }
-  });
+                      if (validation) {
+                          var $contactForm = $('#hire-me');
+                          $contactForm.submit(function(e) {
+                                  e.preventDefault();
+                                  jQuery.ajax({
+                                      url: '//formspree.io/kunalchavda99@gmail.com',
+                                      method: 'POST',
+                                      data: $(this).serialize(),
+                                      dataType: 'json',
+                                      beforeSend: function() {
+                                          $contactForm.append('<div class="alert alert--loading">Sending message…</div>');
+                                      },
+                                      success: function(data) {
+                                          $contactForm.find('.alert--loading').hide();
+                                          $contactForm.append('<div class="alert alert--success">Message sent!</div>');
+                                      },
+                                      error: function(err) {
+                                          $contactForm.find('.alert--loading').hide();
+                                          $contactForm.append('<div class="alert alert--error">Ops, there was an error.</div>');
+                                      }
+                                  });
+                              }
+                          });
+                        });
     </script>
   </body>
 </html>
