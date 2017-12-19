@@ -439,18 +439,16 @@
           var email_pattern = /^[a-zA-Z][\w\.-]*[a-zA-Z0-9]@[a-zA-Z0-9][\w\.-]*[a-zA-Z0-9]\.[a-zA-Z][a-zA-Z\.]*[a-zA-Z]$/;
 
           // var phone_pattern = /^[0-9]+$/;
-          jQuery('#modal_send-contact').on("click", function() {
-                      var validation = true;
-                      name_val = jQuery("#username").val();
-                      // phone_val = jQuery("#phone1").val();
-                      email_val = jQuery("#email").val();
+         jQuery('#modal_send-contact').on("click", function() {
+                var validation = true;
+                                      name_val = jQuery("#username").val();
+                                      // phone_val = jQuery("#phone1").val();
+                                      email_val = jQuery("#email").val();
 
-                      name_match = name_val.match(name_pattern);
-                      email_match = email_val.match(email_pattern);
-                      // phone_match  = phone_val.match(phone_pattern);
-
-
-                      if (name_val != '') {
+                                      name_match = name_val.match(name_pattern);
+                                      email_match = email_val.match(email_pattern);
+                                      // phone_match  = phone_val.match(phone_pattern);
+                           if (name_val != '') {
 
                           if (name_match === null) {
                               validation = false;
@@ -486,8 +484,7 @@
                           validation = false;
                       }
 
-
-                      if (validation) {
+                       if (validation) {
                           var $contactForm = $('#hire-me');
                           $contactForm.submit(function(e) {
                                   e.preventDefault();
@@ -509,8 +506,11 @@
                                       }
                                   });
                               }
-                          });
-                        };
+                        }
+         });
+
+
+         
     </script>
   </body>
 </html>
