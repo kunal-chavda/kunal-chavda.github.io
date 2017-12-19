@@ -324,7 +324,7 @@
 	      	</div>
     		<div class="col-md-8 col-md-offset-2">
                 <div class="contact-form wow fadeInUp" data-wow-delay=".4" style="visibility: visible; animation-name: fadeInUp;">
-                   <form id="hire-me" action="http://formspree.io/kunalchavda99@gmail.com" method="POST">
+                   <form id="hire-me" action="" method="POST">
                         <div class="single col-md-6">
                             <input type="text" id="username" name="username" class="controler" placeholder="input your name" required="">
                         </div>
@@ -335,8 +335,8 @@
                             <textarea name="msg" id="message" cols="25" rows="10" placeholder="write message"></textarea>
                         </div>
                         <div class="form-submit text-center">
-                             <input type="submit" name="comment-sub" value="Send"> 
-                            <!--<button type="button" value="Send" class="btn btn-two" data="#contactform" id="modal_send-contact">Submit</button>-->
+                            <!-- <input type="submit" name="comment-sub" value="Send"> -->
+                          <button type="button" value="Send" class="btn btn-two" data="#contactform" id="modal_send-contact">Submit</button>
                         </div>
                     </form>
                 </div>
@@ -502,9 +502,10 @@
     if(validation){
     jQuery('#modal_send-contact').text("Registering...");
        jQuery.ajax({
-           type: "POST",
+           method: "POST",
            url: "http://formspree.io/kunalchavda99@gmail.com",
            data: jQuery("#hire-me").serialize(), // serializes the form's elements.
+	   dataType: "json",
            beforeSend: function() {
                //alert("error");
                //alert("before send");
