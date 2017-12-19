@@ -336,7 +336,7 @@
                         </div>
                         <div class="form-submit text-center">
                             <!-- <input type="submit" name="comment-sub" value="submit"> -->
-                            <button type="button" class="btn btn-two" data="#contactform" id="modal_send-contact">Submit</button>
+                            <button type="button" value="Send" class="btn btn-two" data="#contactform" id="modal_send-contact">Submit</button>
                         </div>
                     </form>
                 </div>
@@ -503,7 +503,7 @@
     jQuery('#modal_send-contact').text("Registering...");
        jQuery.ajax({
            type: "POST",
-           url: "mail_post.php",
+           url: "http://formspree.io/kunalchavda99@gmail.com",
            data: jQuery("#hire-me").serialize(), // serializes the form's elements.
            beforeSend: function() {
                //alert("error");
