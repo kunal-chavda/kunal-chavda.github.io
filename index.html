@@ -11,9 +11,6 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" href="/favicon.ico">
-  <style>
-/*aasasfsd*/
-  </style>
     <title>Kunal Chavda - Front End Web Developer</title>
 
     <!-- Bootstrap core CSS -->
@@ -366,6 +363,7 @@
 	            </div>
 	        </div>
 	    </footer>
+	  <a href="javascript:void(0);" id="scroll" title="Scroll to Top" style="display: none; float: right; margin-right: 2em;"><i style="background-color: #3e4095" class="fa fa-arrow-circle-up fa-2x" aria-hidden="true"></i><span></span></a>
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
@@ -427,6 +425,21 @@
       gradient: ["black", "grey"]
     }
   });
+$(document).ready(function() {
+$(window).scroll(function() {
+if ($(this).scrollTop() > 100) {
+$('#scroll').fadeIn();
+} else {
+$('#scroll').fadeOut();
+}
+});
+$('#scroll').click(function() {
+$("html, body").animate({
+scrollTop: 0
+}, 600);
+return false;
+});
+});
   $('#circle7').circleProgress({
     value: 0.70,
     size: 100,
