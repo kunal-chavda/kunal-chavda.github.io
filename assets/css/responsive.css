@@ -11,8 +11,8 @@
 	.gallry-wraper {
 	    margin-bottom: 1em;
 	}
-	.skill-wrapper1 {
-	    margin-bottom: 1em;
+	.skill-wrapper1 .col-xs-6.col-md-3{
+	margin-bottom: 2em;
 	}
 	#scroll{
 	right: -15px;
