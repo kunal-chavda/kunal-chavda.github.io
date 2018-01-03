@@ -5,6 +5,9 @@
 		background: #000;
 		border-bottom: 1px solid;
 	}
+	.personal_detail ul{
+		padding-left:0;
+	}
 	.gallry-wraper {
 	    margin-bottom: 1em;
 	}
