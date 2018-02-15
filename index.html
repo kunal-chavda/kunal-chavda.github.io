@@ -316,7 +316,7 @@
         <div class="row">
           <div class="col-md-8 col-md-offset-2 promotion">
             <h2>Let's do some cool project together.</h2>
-            <a href="" class="site-btn btn-light mt25 wow fadeInUp" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">HIRE NOW !</a>
+            <a id="hre" href="#." class="site-btn btn-light mt25 wow fadeInUp" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInUp;">HIRE NOW !</a>
           </div>
         </div>
       </div>
@@ -481,76 +481,7 @@ return false;
                                           $contactForm.append('<div class="alert alert--error">Ops, there was an error.</div>');
                                       }
                                   });
-                              });
-        /* jQuery('#modal_send-contact').on("click", function() {
-                var validation = true;
-                                      name_val = jQuery("#username").val();
-                                      // phone_val = jQuery("#phone1").val();
-                                      email_val = jQuery("#email").val();
-
-                                      name_match = name_val.match(name_pattern);
-                                      email_match = email_val.match(email_pattern);
-                                      // phone_match  = phone_val.match(phone_pattern);
-                           if (name_val != '') {
-
-                          if (name_match === null) {
-                              validation = false;
-                              jQuery('#username').val('');
-                              jQuery('#username').attr("placeholder", "Invalid format");
-                              jQuery('#username').addClass('inputTxtError');
-
-                          } else {
-                              jQuery('#username').parent().find('.error').text("span").remove();
-                              jQuery('#username').removeClass('inputTxtError');
-                          }
-                      } else {
-                          jQuery('#username').attr("placeholder", "Enter Name");
-                          jQuery('#username').addClass('inputTxtError');
-                          validation = false;
-                      }
-
-                      if (email_val != '') {
-
-                          if (email_match === null) {
-                              validation = false;
-                              jQuery('#email').val('');
-                              jQuery('#email').attr("placeholder", "Invalid format");
-                              jQuery('#email').addClass('inputTxtError');
-
-                          } else {
-                              jQuery('#email').parent().find('.error').text("span").remove();
-                              jQuery('#email').removeClass('inputTxtError');
-                          }
-                      } else {
-                          jQuery('#email').attr("placeholder", "Enter Email");
-                          jQuery('#email').addClass('inputTxtError');
-                          validation = false;
-                      }
-
-                       if (validation) {
-                          var $contactForm = $('#hire-me');
-                          $contactForm.submit(function() {
-                                  
-                                  jQuery.ajax({
-                                      url: '//formspree.io/kunalchavda99@gmail.com',
-                                      method: 'POST',
-                                      data: $(this).serialize(),
-                                      dataType: 'json',
-                                      beforeSend: function() {
-                                          $contactForm.append('<div class="alert alert--loading">Sending message…</div>');
-                                      },
-                                      success: function(data) {
-                                          $contactForm.find('.alert--loading').hide();
-                                          $contactForm.append('<div class="alert alert--success">Message sent!</div>');
-                                      },
-                                      error: function(err) {
-                                          $contactForm.find('.alert--loading').hide();
-                                          $contactForm.append('<div class="alert alert--error">Ops, there was an error.</div>');
-                                      }
-                                  });
-                              });
-                        }
-         });*/
+                              })
 
 
          
