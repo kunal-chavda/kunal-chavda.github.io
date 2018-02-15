@@ -17,6 +17,16 @@
 	#scroll{
 	right: -15px;
 	}
-	
-	
+
+}
+@media screen and (max-width: 320px) {
+	.hire-form .border-center {
+    height: 1px;
+    width: 280px !important;
+    margin: 0 auto;
+    background: #0e0e0e;
+}
+	h2.skill-text {
+    font-size: 16px !important;
+}
 }
