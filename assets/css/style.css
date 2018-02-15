@@ -225,7 +225,7 @@ h2.skill-text {
 .pie-effect {
     border: 1px solid #efefef;
     text-align: center;
-    padding: 28.5px;
+    padding: 12%;
     padding-bottom: inherit;
     background-color: #eaeaea;
     transition: 0.5s;
